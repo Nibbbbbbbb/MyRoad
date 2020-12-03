@@ -1,0 +1,9 @@
+# 配置一些通用的
+spring:
+  profiles:
+    active: dev
+
+cn:
+  noobbb:
+    name: MyRoad
+    title: 自己的路
