@@ -31,6 +31,7 @@ public class HelloTest {
     @Value("${cn.noobbb.title}")
     String blogTitle;
 
+
     @Test
     public void TestHello() throws Exception {
         ResultActions resultActions = mvc.perform(MockMvcRequestBuilders.get("/sys/hello").accept(MediaType.APPLICATION_JSON));

@@ -7,18 +7,17 @@
 
 
 
-### 简单记录下过程，完整过程将以后更新到博客 ：
+## 简单记录下过程，完整过程将以后更新到博客 ：
 
 
 
 ### TODO ：
 
--   [x] 0.新建Spring Boot项目
--   [x] 1.文件目录结构
--   [ ] 2.使用yml多配置，使用druid / Hikari连接池
--   [ ] 3.导入mybatis-plus,并且使用MP的AutoGenerator功能
--   [ ] 5.shiro
--   [ ] 6.jwt
+-   [x] 新建Spring Boot项目
+-   [ ] 使用druid / Hikari连接池
+-   [ ] 导入mybatis-plus,并且使用MP的AutoGenerator功能
+-   [ ] shiro
+-   [ ] jwt
 -   [ ] .......
 -   [ ] .......
 -   [ ] .......
