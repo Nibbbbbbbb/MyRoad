@@ -37,8 +37,8 @@ spring:
       aop-patterns: cn.noobbb.*.service.*
 
       web-stat-filter:
-        #是否启用StatFilter默认值true  https://gitee.com/jinglun404/DLXD/issues/IGCM9
-        enabled: true
+        #是否启用StatFilter默认值true
+        enabled: false
         #添加过滤规则
         url-pattern: /*
         #忽略过滤的格式
