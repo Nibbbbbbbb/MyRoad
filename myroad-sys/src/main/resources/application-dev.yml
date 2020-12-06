@@ -37,7 +37,7 @@ spring:
       aop-patterns: cn.noobbb.*.service.*
 
       web-stat-filter:
-        #是否启用StatFilter默认值true  https://gitee.com/jinglun404/DLXD/issues/IGCM9
+        #是否启用StatFilter默认值true  使用MockMvc测试时, WebStatFilter类其实是没有用的，会导致空指针，解决方法：https://github.com/alibaba/druid/issues/2050
         enabled: true
         #添加过滤规则
         url-pattern: /*
