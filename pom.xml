@@ -4,9 +4,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.4.0</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
     <groupId>cn.noobbb</groupId>
     <artifactId>MyRoad</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0</version>
 
     <!--  多模块中父项目必须以pom打包  -->
     <packaging>pom</packaging>
@@ -16,5 +23,41 @@
         <module>myroad-sys</module>
         <module>myroad-utils</module>
     </modules>
+
+    <properties>
+        <hutool.version>5.5.2</hutool.version>
+        <mysql.version>8.0.22</mysql.version>
+        <druid.version>1.2.3</druid.version>
+    </properties>
+
+    <!-- 配置共有依赖 -->
+    <dependencyManagement>
+        <dependencies>
+
+            <!--	hutool工具类库	-->
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
+
+            <!--   mysql    -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+
+            <!-- druid连接池 https://mvnrepository.com/artifact/com.alibaba/druid-spring-boot-starter -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+
+
+
+        </dependencies>
+    </dependencyManagement>
 
 </project>

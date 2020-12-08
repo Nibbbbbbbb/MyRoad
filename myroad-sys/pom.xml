@@ -2,17 +2,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.4.0</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <groupId>cn.noobbb</groupId>
+        <artifactId>MyRoad</artifactId>
+        <version>1.0.0</version>
     </parent>
-    <groupId>cn.noobbb</groupId>
+
     <artifactId>myroad-sys</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>myroad-sys</name>
-    <description>Demo project for Spring Boot</description>
+    <description>核心模块</description>
 
     <properties>
         <java.version>11</java.version>
@@ -32,8 +32,8 @@
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
-            <version>5.5.2</version>
         </dependency>
+
 
         <!--   mysql    -->
         <dependency>
@@ -45,7 +45,6 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid-spring-boot-starter</artifactId>
-            <version>1.2.3</version>
         </dependency>
 
         <!-- JDBC 依赖 -->
@@ -59,18 +58,14 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
-            <optional>true</optional>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
         </dependency>
 
     </dependencies>

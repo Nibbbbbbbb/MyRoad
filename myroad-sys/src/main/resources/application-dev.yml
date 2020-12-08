@@ -8,8 +8,9 @@ server:
 spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
+    # mysql-connector-java 6及以上版本，需要把com.mysql.jdbc.Driver换成com.mysql.cj.jdbc.Driver，并且url需要指定时区（serverTimezone=Asia/Shanghai）和 SSL （useSSL=false）
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/my_road?useUnicode=true&useSSL=false&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://127.0.0.1:3306/my_road?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai&useSSL=false
     username: root
     password: 5233
     druid:
