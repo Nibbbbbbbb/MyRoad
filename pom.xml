@@ -28,13 +28,40 @@
         <hutool.version>5.5.2</hutool.version>
         <mysql.version>8.0.22</mysql.version>
         <druid.version>1.2.3</druid.version>
+        <knife4j.version>3.0.2</knife4j.version>
     </properties>
 
     <!-- 配置共有依赖 -->
     <dependencyManagement>
         <dependencies>
 
-            <!--	hutool工具类库	-->
+            <!--   Mybatis-Plus   快速开始：https://mybatis.plus/guide/  -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>3.4.1</version>
+            </dependency>
+
+            <!--   Mybatis-Plus generator  代码生成器：https://mybatis.plus/guide/generator.html  -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-generator</artifactId>
+                <version>3.4.1</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.velocity</groupId>
+                <artifactId>velocity-engine-core</artifactId>
+                <version>2.2</version>
+            </dependency>
+
+            <!--    Swagger 和 Knife4j，前身是swagger-bootstrap-ui： https://doc.xiaominfo.com/      -->
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-spring-boot-starter</artifactId>
+                <version>${knife4j.version}</version>
+            </dependency>
+
+            <!--    hutool工具类库 ：https://www.hutool.cn/      -->
             <dependency>
                 <groupId>cn.hutool</groupId>
                 <artifactId>hutool-all</artifactId>
@@ -54,7 +81,6 @@
                 <artifactId>druid-spring-boot-starter</artifactId>
                 <version>${druid.version}</version>
             </dependency>
-
 
 
         </dependencies>

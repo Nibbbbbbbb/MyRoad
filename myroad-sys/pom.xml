@@ -19,7 +19,6 @@
     </properties>
 
     <dependencies>
-
         <!--引用myroad-utils模块 -->
         <dependency>
             <groupId>cn.noobbb</groupId>
@@ -27,6 +26,27 @@
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
+        <!--   Swagger  -->
+        <dependency>
+            <groupId>com.github.xiaoymin</groupId>
+            <artifactId>knife4j-spring-boot-starter</artifactId>
+        </dependency>
+
+        <!--   Mybatis-Plus   -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+        </dependency>
+
+        <!--   Mybatis-Plus generator   -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-generator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity-engine-core</artifactId>
+        </dependency>
 
         <!--	hutool工具类库	-->
         <dependency>
@@ -41,7 +61,7 @@
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
 
-        <!-- druid连接池 https://mvnrepository.com/artifact/com.alibaba/druid-spring-boot-starter -->
+        <!-- druid连接池  -->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid-spring-boot-starter</artifactId>
