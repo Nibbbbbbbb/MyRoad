@@ -14,7 +14,8 @@
 ### TODO ：
 
 -   [x] 新建Spring Boot项目
--   [ ] 使用druid / Hikari连接池
+-   [x] 使用druid / Hikari连接池
+-   [x] 引入Swagger 和 lomboko
 -   [ ] 导入mybatis-plus,并且使用MP的AutoGenerator功能
 -   [ ] shiro
 -   [ ] jwt

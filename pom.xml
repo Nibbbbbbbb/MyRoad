@@ -54,6 +54,16 @@
                 <version>2.2</version>
             </dependency>
 
+
+            <!--    lombok     https://projectlombok.org/   -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.16</version>
+                <scope>provided</scope>
+            </dependency>
+
+
             <!--    Swagger 和 Knife4j，前身是swagger-bootstrap-ui： https://doc.xiaominfo.com/      -->
             <dependency>
                 <groupId>com.github.xiaoymin</groupId>
