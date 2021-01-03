@@ -1,5 +1,6 @@
-package cn.noobbb.myroadsys.controller;
+package cn.noobbb.myroad.controller;
 
+import cn.noobbb.myroad.MyroadSysApplication;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -22,7 +23,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @Description:
  * @History:
  */
-@SpringBootTest
+@SpringBootTest(classes = {MyroadSysApplication.class})
 @AutoConfigureMockMvc
 @ActiveProfiles("test")
 public class HelloTest {

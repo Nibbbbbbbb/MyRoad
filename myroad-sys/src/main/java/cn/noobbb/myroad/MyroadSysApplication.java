@@ -1,8 +1,10 @@
-package cn.noobbb.myroadsys;
+package cn.noobbb.myroad;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+@MapperScan("cn.noobbb.myroad.repository")
 @SpringBootApplication
 public class MyroadSysApplication {
 

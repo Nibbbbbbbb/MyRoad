@@ -1,4 +1,4 @@
-package cn.noobbb.myroadsys.generator;
+package cn.noobbb.myroad.generator;
 
 import com.baomidou.mybatisplus.core.toolkit.StringPool;
 import com.baomidou.mybatisplus.generator.AutoGenerator;
@@ -36,8 +36,6 @@ public class MybatisPlusAutoGenerator {
 
         // 数据源配置
         DataSourceConfig dataSourceConfig = new DataSourceConfig();
-        // 默认mysql可以不用写
-        //dataSourceConfig.setDbType(DbType.MYSQL);
         dataSourceConfig.setUrl("jdbc:mysql://127.0.0.1:3306/my_road?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai");
         dataSourceConfig.setDriverName("com.mysql.cj.jdbc.Driver");
         dataSourceConfig.setUsername("root");
@@ -47,7 +45,7 @@ public class MybatisPlusAutoGenerator {
         // 包配置
         PackageConfig packageConfig = new PackageConfig();
         packageConfig.setModuleName("");
-        packageConfig.setParent("cn.noobbb.myroadsys.generator");
+        packageConfig.setParent("cn.noobbb.myroad.generator");
         packageConfig.setEntity("domain");
         packageConfig.setMapper("repository");
         packageConfig.setXml("repository");
@@ -69,7 +67,7 @@ public class MybatisPlusAutoGenerator {
             @Override
             public String outputFile(TableInfo tableInfo) {
                 // 自定义输出文件名 ， 如果你 Entity 设置了前后缀、此处注意 xml 的名称会跟着发生变化！！
-                return projectPath + "/myroad-sys/src/main/java/cn/noobbb/myroadsys/generator/mapper/" + packageConfig.getModuleName()
+                return projectPath + "/myroad-sys/src/main/java/cn/noobbb/myroad/generator/repository/mapper/" + packageConfig.getModuleName()
                         + "/" + tableInfo.getEntityName() + "Mapper" + StringPool.DOT_XML;
             }
         });
@@ -89,15 +87,15 @@ public class MybatisPlusAutoGenerator {
         strategy.setControllerMappingHyphenStyle(true);
         strategy.setRestControllerStyle(true);
 
-        // 逻辑删除字段
-        strategy.setLogicDeleteFieldName("del_flag");
+        // 逻辑删除字段 全局配置，这边可以不用写
+//        strategy.setLogicDeleteFieldName("del_flag");
         // 生成Lombok 和链式
         strategy.setChainModel(true);
         strategy.setEntityLombokModel(true);
 
         // 基类配置
-        strategy.setSuperEntityClass("cn.noobbb.myroadsys.generator.domain.BaseEntity");
-        // 数据库的字段名
+        strategy.setSuperEntityClass("cn.noobbb.myroad.domain.BaseEntity");
+        // 基类字段名
         strategy.setSuperEntityColumns("id", "create_by", "create_time", "update_by", "update_time", "del_flag");
 
         // 自己填充要生成的表名

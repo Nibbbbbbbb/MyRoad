@@ -1,4 +1,4 @@
-package cn.noobbb.myroadsys.config;
+package cn.noobbb.myroad.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -32,7 +32,7 @@ public class Knife4jConfiguration {
                 .groupName("1.0版本")
                 .select()
                 //这里指定Controller扫描包路径
-                .apis(RequestHandlerSelectors.basePackage("cn.noobbb.myroadsys.controller"))
+                .apis(RequestHandlerSelectors.basePackage("cn.noobbb.myroad.controller"))
                 .paths(PathSelectors.any())
                 .build();
         return docket;

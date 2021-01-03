@@ -1,4 +1,4 @@
-package cn.noobbb.myroadutils.hello;
+package cn.noobbb.myroad.hello;
 
 /**
  * @author: chenbihao

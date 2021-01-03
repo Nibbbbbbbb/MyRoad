@@ -1,10 +1,10 @@
-package cn.noobbb.myroadsys;
+package cn.noobbb.myroad;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MyroadSysApplicationTests {
+class MyroadUtilsApplicationTests {
 
 	@Test
 	void contextLoads() {
