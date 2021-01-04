@@ -7,14 +7,13 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
 
 import java.time.LocalDateTime;
 
 /**
  * <p>
- * 
+ * BaseEntity 基类
  * </p>
  *
  * @author chenbihao
@@ -22,7 +21,7 @@ import java.time.LocalDateTime;
  */
 @Data
 @Accessors(chain = true)
-@ApiModel(value="BaseEntity对象", description="")
+@ApiModel(value="BaseEntity对象", description="基类")
 public class BaseEntity {
 
     @TableId(type = IdType.ASSIGN_UUID)
