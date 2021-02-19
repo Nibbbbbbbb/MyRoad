@@ -37,9 +37,11 @@ public class HelloTest {
 
     @Test
     public void TestHello() throws Exception {
-        ResultActions resultActions = mvc.perform(MockMvcRequestBuilders.get("/sys/hello").accept(MediaType.APPLICATION_JSON));
-        //设置编码
-        resultActions.andReturn().getResponse().setCharacterEncoding("UTF-8");
+        ResultActions resultActions = mvc.perform(MockMvcRequestBuilders
+                                                  .get("/sys/hello")
+                                                  .accept(MediaType.APPLICATION_JSON_UTF8_VALUE));
+        // .accept(MediaType.APPLICATION_JSON_UTF8_VALUE) 设置返回值类型为utf-8，否则默认为ISO-8859-1    
+        // 二选一： resultActions.andReturn().getResponse().setCharacterEncoding("UTF-8");
         resultActions.andExpect(status().isOk())
                 .andExpect(content().string(equalTo("Hello~,This is my blog," + blogName + " " + blogTitle)));
     }
